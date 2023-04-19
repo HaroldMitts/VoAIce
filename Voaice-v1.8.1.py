@@ -20,14 +20,15 @@ def transcribe_audio(speech_config):
 
 def generate_response(input_text, conversation_history):
     messages = [
-        {"role": "system", "content": "You are a helpful assistant named Betty. You always provide answers which are easy to understand, especially for complex questions."},
+        {"role": "system", "content": "You are a helpful assistant. You always provide answers which are easy to understand, especially for complex questions."},
     ]
 
     messages.extend(conversation_history)
     messages.append({"role": "user", "content": input_text})
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        #model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=messages,
         max_tokens=2000,
         n=1,
@@ -51,14 +52,14 @@ def play_audio(audio_file_path):
 def remove_temp_files(file_path):
     os.remove(file_path)
 
-def main(quit_phrases=["I quit", "quit", "goodbye", "stop", "exit"]):
-    keys = load_api_keys("C:\\GitHub\\VoAI\\VoAI\\keys.json")
+def main(quit_phrases=["I quit", "quit", "goodbye", "stop", "exit"]): #exit keywords
+    keys = load_api_keys("C:\\GitHub\\VoAI\\VoAI\\keys.json") #save your keys and Azure region to C:\GitHub\VoAI\VoAI\keys.json or change this path as needed.
     azure_api_key = keys["azure_api_key"]
     azure_region = keys["azure_region"]
     openai_api_key = keys["openai_api_key"]
-    voice = "en-US-EricNeural"
+    voice = "en-US-EricNeural" # Set the voice here
     speech_config = speechsdk.SpeechConfig(subscription=azure_api_key, region=azure_region)
-    speech_config.speech_synthesis_voice_name = voice  # Set the voice here
+    speech_config.speech_synthesis_voice_name = voice  
     openai.api_key = openai_api_key
 
     conversation_history = []
