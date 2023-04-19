@@ -7,8 +7,8 @@ v1 waits for an exit keyword and loops through continuously conversing with the 
 
 1. Listen for spoken audio from a microphone
 2. Transcribe the audio from step 1 into text for use in step 3
-3. Input the transcribed text from step 2 into GPT 4 API for processing by GPT
-4. Produce a response to the input from step 3 using GPT 4 API
+3. Input the transcribed text from step 2 into GPT API for processing by GPT
+4. Produce a response to the input from step 3 using GPT API
 5. Convert the text produced by step 4 into audio
 6. Play the audio from step 5 back to the user
 7. Wait for the user response and repeat the cycle again, based on the user response. If the user uses a keyword, end the routine.
