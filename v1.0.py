@@ -3,10 +3,13 @@ import os
 import tempfile
 import openai
 
-# Replace with your API key and region
-api_key = "YOUR_API_KEY"
-region = "YOUR_REGION"
-openai.api_key = "YOUR_OPENAI_API_KEY"
+import json
+
+def load_api_keys(file_path):
+    with open(file_path, "r") as f:
+        keys = json.load(f)
+    return keys
+
 
 def transcribe_audio(speech_config):
     audio_config = speechsdk.AudioConfig(use_default_microphone=True)
@@ -46,7 +49,13 @@ def play_mp3(audio_file_path):
     os.system(f"powershell -c (New-Object Media.SoundPlayer \"{audio_file_path}\").PlaySync();")
 
 def main():
-    speech_config = speechsdk.SpeechConfig(subscription=api_key, region=region)
+    keys = load_api_keys("C:\\GitHub\\VoAI\\VoAI\\keys.json")
+    azure_api_key = keys["azure_api_key"]
+    azure_region = keys["azure_region"]
+    openai_api_key = keys["openai_api_key"]
+
+    speech_config = speechsdk.SpeechConfig(subscription=azure_api_key, region=azure_region)
+    openai.api_key = openai_api_key
 
     while True:
         print("Listening...")
