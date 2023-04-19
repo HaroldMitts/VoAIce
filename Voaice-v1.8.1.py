@@ -45,7 +45,6 @@ def synthesize_and_save_speech(speech_config, response_text, file_path):
     with open(file_path, "wb") as f:
         f.write(result.audio_data)
 
-
 def play_audio(audio_file_path):
     subprocess.call(["ffplay", "-nodisp", "-autoexit", audio_file_path], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
@@ -57,8 +56,9 @@ def main(quit_phrases=["I quit", "quit", "goodbye", "stop", "exit"]):
     azure_api_key = keys["azure_api_key"]
     azure_region = keys["azure_region"]
     openai_api_key = keys["openai_api_key"]
-
+    voice = "en-US-EricNeural"
     speech_config = speechsdk.SpeechConfig(subscription=azure_api_key, region=azure_region)
+    speech_config.speech_synthesis_voice_name = voice  # Set the voice here
     openai.api_key = openai_api_key
 
     conversation_history = []
