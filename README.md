@@ -15,7 +15,7 @@ v1 waits for an exit keyword and loops through continuously conversing with the 
 
 I chose ACS over the popular ElevenLabs text to speech engine due to costs. You can get a lot of free speech services from Azure, whereas ElevenLabs is kind of pricy. Yes, ElevenLabs has a free plan, but it is limited to 3 voices and 10k characters per month. ACS on the other hand has hundreds of voices, including international, and has 20k characters per month for the free plan and the paid plan is very cheap. Also, ACS supports SAML, which enables you fine control over pronuciations. 
 
-Also, on costs. Through the entire development cycle of this, my total OpenAI costs were a nickel. 
+Also, on costs. Through the entire development cycle (way more token turns than shown in the demo) of this, my total OpenAI costs were a nickel. 
 
 ![image](https://user-images.githubusercontent.com/13913671/233161902-924d707f-fba8-415a-83c3-80dffaf560b3.png)
 
