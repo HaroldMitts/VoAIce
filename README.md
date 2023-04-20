@@ -46,7 +46,7 @@ You can modify the path where the script expects to find your keys.json file fro
 
 The structure of the keys.json should be like this;
 
-keys.json format [just show an on-screen example of the format expected]
+keys.json format
 
 ```
 {
