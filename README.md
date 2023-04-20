@@ -19,7 +19,7 @@ Also, on costs. Through the entire development cycle of this, my total OpenAI co
 
 ![image](https://user-images.githubusercontent.com/13913671/233161902-924d707f-fba8-415a-83c3-80dffaf560b3.png)
 
-Video and demo of the script in action: https://youtu.be/1Z4Z4Z4Z4Z4
+Video and demo of the script in action: https://youtu.be/nDTDlOze-40
 
 ## Modules required to be installed
 
