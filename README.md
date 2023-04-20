@@ -42,7 +42,7 @@ Ensure that you have these packages installed with the appropriate versions befo
 
 ## JSON file format
 
-You can modify the path where the script expects to find your keys.json file from the default of c:\GitHub\VoAI\VoAI\keys.json to a different location by changing the path in the script.
+You can modify the path where the script expects to find your keys.json file from the default of c:\keys\keys.json to a different location by changing the path in the script.
 
 The structure of the keys.json should be like this;
 
