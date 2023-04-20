@@ -18,3 +18,42 @@ I chose ACS over the popular ElevenLabs text to speech engine due to costs. You 
 Also, on costs. Through the entire development cycle of this, my total OpenAI costs were a nickel. 
 
 ![image](https://user-images.githubusercontent.com/13913671/233161902-924d707f-fba8-415a-83c3-80dffaf560b3.png)
+
+Video and demo of the script in action: https://youtu.be/1Z4Z4Z4Z4Z4
+
+## Modules required to be installed
+
+To run this script, you'll need to meet the following system requirements:
+
+1. Python: The script requires Python 3.6 or higher. Some of the libraries and syntax used may not be compatible with Python 2.x or older versions of Python 3.x.
+2. Libraries and packages: You'll need to install the following packages using pip or your preferred package manager:
+    
+- azure-cognitiveservices-speech: This package is required for speech recognition and text-to-speech capabilities provided by Azure Speech Services.
+
+`pip install azure-cognitiveservices-speech`
+
+- openai: This package is needed to access the OpenAI API and interact with the GPT-4 language model.
+
+`pip install openai`
+
+- FFmpeg: While not a Python package, FFmpeg is required for audio playback using the ffplay command in the play_audio function. You'll need to download and install FFmpeg on your system. Installation instructions can be found on the official FFmpeg website (https://ffmpeg.org/download.html).
+
+Ensure that you have these packages installed with the appropriate versions before running the script. You might also want to set up a virtual environment for your project to manage these dependencies more efficiently.
+
+## JSON file format
+
+You can modify the path where the script expects to find your keys.json file from the default of c:\GitHub\VoAI\VoAI\keys.json to a different location by changing the path in the script.
+
+The structure of the keys.json should be like this;
+
+keys.json format [just show an on-screen example of the format expected]
+
+```
+{
+    "azure_api_key": "5ccc729abdexxxxxxxxxxxxxxx",
+    "azure_region": "westus2",
+    "openai_api_key": "sk-ccccccccccccccccccccccc"
+}
+```
+
+Replace the values with your own keys. You can get your Azure API key and region from the Azure portal, once you have setup an Azure resource for speech services. You can get your OpenAI API key from the OpenAI dashboard.
