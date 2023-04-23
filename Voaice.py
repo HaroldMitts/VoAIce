@@ -53,7 +53,7 @@ def remove_temp_files(file_path):
     os.remove(file_path)
 
 def main(quit_phrases=["I quit", "quit", "goodbye", "stop", "exit"]): #exit keywords
-    keys = load_api_keys("C:\\keys\\keys.json") #save your keys and Azure region to C:\GitHub\VoAI\VoAI\keys.json or change this path as needed.
+    keys = load_api_keys("/path/in/container/keys.json") #save your keys and Azure region to C:\GitHub\VoAI\VoAI\keys.json or change this path as needed.
     azure_api_key = keys["azure_api_key"]
     azure_region = keys["azure_region"]
     openai_api_key = keys["openai_api_key"]
