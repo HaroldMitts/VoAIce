@@ -66,4 +66,4 @@ I initially developed this for my personal use and later decided to share it wit
 
 I will try to use the latest libraries, and future releases will frequently include updates and improvements. Please take this into consideration before deciding to use the library. I want to make it clear that I cannot accept any responsibility for any damage caused by using the code in this repository. If you feel that this is not suitable for your purposes, you are free to explore alternatives.
 
-I am incredibly busy. If I don't respond right away, please accept my apologies and let me know or try again. My GitHub feed gets long since I am not checking it every day and follow several busy repos, so if you @mention me, it should get my attention. 
+I am incredibly busy. If I don't respond right away, please accept my apologies and let me know or try again. My GitHub feed gets long since I am not checking it every day and follow several busy repos, so if you @mention me, it should get my attention, or better yet, start a conversation using the Discussions link https://github.com/HaroldMitts/VoAIce/discussions/. 
