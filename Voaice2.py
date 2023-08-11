@@ -19,18 +19,24 @@ def transcribe_audio(speech_config):
     return result.text.strip()
 
 def generate_response(input_text, conversation_history):
-    messages = [
-        {"role": "system", "content": "You are a helpful assistant. You always provide answers which are easy to understand, especially for complex questions."},
-    ]
 
+    messages = [
+        {"role": "system", "content": "Think step by step before answering any question. \
+            reflect on the question and all potential answers. Examine the flaw and faulty \
+            logic of each answer option and eliminate the ones that are incorrect. \
+            If you are unsure of the answer, make an educated guess. \
+            If you are still unsure, eliminate the answers that you know are incorrect and then guess \
+            from the remaining answers. \
+            If any answer provided is comprised of an educated guess, make sure to note that in your answer."},
+    ]
     messages.extend(conversation_history)
     messages.append({"role": "user", "content": input_text})
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        #model="gpt-4",
+        #model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=messages,
-        max_tokens=2000,
+        max_tokens=200,
         n=1,
         stop=None,
         temperature=1.3,
@@ -53,7 +59,9 @@ def remove_temp_files(file_path):
     os.remove(file_path)
 
 def main(quit_phrases=["I quit", "quit", "goodbye", "stop", "exit"]): #exit keywords
-    keys = load_api_keys(r"c:\keys\keys.json") #save your keys and Azure region to C:\GitHub\VoAI\VoAI\keys.json or change this path as needed.
+    keys_file_path = r"C:\\keys\\keys.json"
+    keys = load_api_keys(keys_file_path)
+    #keys = load_api_keys("/path/in/container/keys.json") #save your keys and Azure region to C:\GitHub\VoAI\VoAI\keys.json or change this path as needed.
     azure_api_key = keys["azure_api_key"]
     azure_region = keys["azure_region"]
     openai_api_key = keys["openai_api_key"]
