@@ -57,3 +57,13 @@ The structure of the keys.json should be like this;
 ```
 
 Replace the values with your own keys. You can get your Azure API key and region from the Azure portal, once you have setup an Azure resource for speech services. You can get your OpenAI API key from the OpenAI dashboard.
+
+## Note
+
+Please note that due to time constraints, I was unable to thoroughly test all of the methods or fully document this repository and code. If you encounter any issues, please report them - your contributions are appreciated.
+
+I initially developed this for my personal use and later decided to share it with the community. As I have not maintained any open-source projects before, any assistance or feedback would be greatly appreciated. If you would like to contribute in any way, please feel free to reach out to me with your suggestions.
+
+I will try to use the latest libraries, and future releases will frequently include updates and improvements. Please take this into consideration before deciding to use the library. I want to make it clear that I cannot accept any responsibility for any damage caused by using the code in this repository. If you feel that this is not suitable for your purposes, you are free to explore alternatives.
+
+I am incredibly busy. If I don't respond right away, please accept my apologies and let me know or try again. My GitHub feed gets long since I am not checking it every day and follow several busy repos, so if you @mention me, it should get my attention, or better yet, start a conversation using the Discussions link https://github.com/HaroldMitts/VoAIce/discussions/. 
